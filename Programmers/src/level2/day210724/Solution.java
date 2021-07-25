@@ -9,15 +9,15 @@ public class Solution {
         //1. 가장 큰 수 기준으로 배수 조회
         Arrays.sort(arr);
         int maxValue = arr[arr.length - 1];
-        boolean isDouble = false;
+        boolean isMcm = false;
         int var = 2;
-        while(!isDouble) {
+        while(!isMcm) {
 	        for(int i = 0; i < arr.length - 1; i++) {
 	        	if(maxValue % arr[i] == 0) {
-	        		isDouble = true;
+	        		isMcm = true;
 	        		answer = maxValue;
 	        	} else {
-	        		isDouble = false;
+	        		isMcm = false;
 	        		break;
 	        	}
 	        }
@@ -44,7 +44,7 @@ public class Solution {
     	return sb.toString();
     }
     
-    
+    //행렬의 곱셈
     static int[][] multipleArr(int[][] arr1, int[][] arr2) {
         int[][] answer = new int[arr1.length][arr2[0].length];
         
